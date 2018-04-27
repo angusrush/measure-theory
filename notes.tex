@@ -81,21 +81,25 @@
 
 % Declare theorem styles
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{counterexample}{Counterexample}[section]
+\newtheorem{definition}{Definition}
+\newtheorem{example}[definition]{Example}
+\newtheorem{recurring_example}[definition]{Recurring Example}
+\newtheorem{counterexample}[definition]{Counterexample}
+\newtheorem{fact}[definition]{Fact}
 
 \theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{proposition}[definition]{Proposition}
 
 \theoremstyle{remark}
-\newtheorem{claim}{Claim}[section]
-\newtheorem{recipe}{Recipe}[section]
-\newtheorem{note}{Note}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{joke}{Joke}[section]
+\newtheorem{claim}[definition]{Claim}
+\newtheorem{recipe}[definition]{Recipe}
+\newtheorem{note}[definition]{Note}
+\newtheorem{notation}[definition]{Notation}
+\newtheorem{joke}[definition]{Joke}
+
 
 \begin{document}
 \maketitle
@@ -163,14 +167,14 @@
 That is, a $\sigma$-algebra is an algebra of sets which is closed under \emph{countable}, rather than finite, unions and intersections. This is a general theme: `$\sigma$-' is often shorthand for something like `countable'. (Another example is so-called $\sigma$-finiteness).
 
 \begin{note}
-  In the course, $\sigma$-algebras were referred to as `$\sigma$-fields'. We use the more standard terminology of `$\sigma$-algebra' in these notes.
+  Note that $\sigma$-algebras are often referred to as `$\sigma$-fields'. We use the more standard terminology of `$\sigma$-algebra' in these notes.
 \end{note}
 
 The theory of $\sigma$-algebras is similar to that of topologies; there are two differences in their definitions:
 \begin{itemize}
-  \item $\sigma$-algebras are closed under the taking of complements, while topologies are not
+  \item $\sigma$-algebras are closed under the taking of complements, while topologies are not.
 
-  \item topologies are closed under \emph{arbitrary} unions and \emph{finite} intersections; $\sigma$-algebras are closed under \emph{countable} unions and (as we will see below) \emph{countable} intersections
+  \item Topologies are closed under \emph{arbitrary} unions and \emph{finite} intersections; $\sigma$-algebras are closed under \emph{countable} unions and (as we will see below) \emph{countable} intersections.
 \end{itemize}
 
 \begin{lemma}
@@ -479,9 +483,9 @@ The idea is this: we imagine trying to cover our set $S$ by sets whose measure w
 \begin{note}
   Roughly speaking, the reasoning behind the definition of a measurable set is as follows. A set $E$ is measurable if it is regular enough that it can act as a screen in the following way: for \emph{any} set $A$, the outer measure of $A$ is equal to the outer measure of the part of $A$ which is hidden by the screen plus the outer measure part of $A$ which is visible.
 
-  There is also a more `high-brow' way of viewing the above definition, which can be seen in, for example,~\cite{measurablesetsarelimitpoints}. In this approach, measurable sets in the above sense are shown to be the limit points of the collection of so-called `elementary sets,' i.e.\ sets which are expressible as a finite union of intervals.
+  There is also a more high-brow way of viewing the above definition, which can be seen in, for example,~\cite{measurablesetsarelimitpoints}. In this approach, measurable sets in the above sense are shown to be the limit points of the collection of so-called `elementary sets,' i.e.\ sets which are expressible as a finite union of intervals.
 
-  Practically speaking, encountering a non-measurable set `in the wild' is extraordinarily rare, and their construction generally involves the invocation of such arcanities as the axiom of choice. The following is an example of a non-measurable set.
+  Practically speaking, encountering a non-measurable set in the wild is extraordinarily rare, and their construction generally involves the invocation of such arcanities as the axiom of choice. The following is a quick sketch of the construction of a non-measurable set.
 \end{note}
 
 \begin{example}
