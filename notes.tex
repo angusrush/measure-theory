@@ -23,6 +23,7 @@
 \usepackage{interval}
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
+\usepackage{anyfontsize}
 
 % chktex-file 18
 % chktex-file 6
@@ -104,7 +105,6 @@
 \begin{document}
 \maketitle
 \tableofcontents
-\chapter{Introduction}
 %%fakesection{Set theory}
 %\section{Set theory}
 %test
@@ -1154,7 +1154,11 @@ The preliminary results of Lebesgue integration theory take rather a different f
 \subsection{Integration of non-negative measurable functions}
 \begin{definition}[Legesgue integral of a non-negative measurable function]
   \label{def:lebesgueintegralofnonnegativemeasurablefunction}
-  Let $E \in \mathcal{M}$, $f\colon E \to \R$ be a measurable function. The \defn{Lebesgue integral} of $f$ over $E$ is
+  Let $E \in \mathcal{M}$, 
+  \begin{equation*}
+    f\colon E \to \R
+  \end{equation*}
+  be a measurable function. The \defn{Lebesgue integral} of $f$ over $E$ is
   \begin{equation*}
     \sup_{\varphi \in \Phi(f, E)} \int_{E} \varphi\ dm,
   \end{equation*}
